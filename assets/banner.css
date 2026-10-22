@@ -1,0 +1,95 @@
+.iabr-banner {
+	position: fixed;
+	right: 12px;
+	bottom: 12px;
+	left: 12px;
+	z-index: 99999;
+	max-width: 520px;
+	margin: 0 auto;
+	padding: 16px 48px 16px 16px;
+	border-radius: 12px;
+	background: #0b1b3f;
+	color: #fff;
+	font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+	animation: iabr-slide-up 0.25s ease-out;
+}
+
+.iabr-banner__text {
+	margin: 0 0 12px;
+	color: inherit;
+}
+
+.iabr-banner__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.iabr-banner__button {
+	display: inline-block;
+	padding: 10px 16px;
+	border: 0;
+	border-radius: 8px;
+	background: #ffc23d;
+	color: #0b1b3f;
+	font: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.iabr-banner__close {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 8px;
+	background: transparent;
+	color: #fff;
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.iabr-banner__button:focus-visible,
+.iabr-banner__close:focus-visible {
+	outline: 3px solid #2f8cff;
+	outline-offset: 2px;
+}
+
+.iabr-banner__status {
+	margin: 8px 0 0;
+	font-size: 14px;
+}
+
+.iabr-banner__status:empty {
+	display: none;
+}
+
+.iabr-offscreen {
+	position: fixed;
+	top: -1000px;
+	left: -1000px;
+	opacity: 0;
+}
+
+@keyframes iabr-slide-up {
+	from {
+		transform: translateY(24px);
+		opacity: 0;
+	}
+
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.iabr-banner {
+		animation: none;
+	}
+}
